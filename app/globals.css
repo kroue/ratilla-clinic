@@ -6,33 +6,36 @@
 :root {
   color-scheme: light dark;
 
-  --paper: #FAF7F2;
+  --paper: #FDFBF8;
   --surface: #FFFFFF;
-  --mint: #D4EDE8;
-  --ink: #2B2B2B;
-  --ink-soft: #56544F;
-  --line: #DDD8CE;
-  --field-border: #8A8781;
+  --mint: #E4F3EF;
+  --cream: #FBF1E6;
+  --ink: #33322E;
+  --ink-soft: #5B5851;
+  --line: #E3DACB;
+  --field-border: #85817A;
 
   --sage: #8FA680;
   --teal: #6B9AA0;
-  --action: #35656B;
-  --action-hover: #2A5257;
+  --action: #2F6067;
+  --action-hover: #244C52;
   --on-action: #FFFFFF;
-  --accent-text: #4F6A45;
+  --accent-text: #4B6A41;
 
-  --danger: #A63A2E;
-  --danger-bg: #FBEDEA;
+  --danger: #A3382C;
+  --danger-bg: #FCEEEB;
 
-  --band: #2B2B2B;
-  --band-ink: #FAF7F2;
-  --band-soft: #BFC7C2;
-  --band-accent: #A9C09A;
-  --band-line: #454745;
+  /* The bite section is the one solid-color band: deep enough to stand apart,
+     still part of the logo's teal rather than a hard black. */
+  --band: #3A6B73;
+  --band-ink: #F7FCFB;
+  --band-soft: #DCECEA;
+  --band-accent: #E0F0CC;
+  --band-line: #5C868C;
 
-  --status-open: #4F6A45;
-  --status-appt: #35656B;
-  --status-closed: #8A8781;
+  --status-open: #4B6A41;
+  --status-appt: #2F6067;
+  --status-closed: #85817A;
 
   --font-serif: var(--font-lora), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-nunito), "Segoe UI", system-ui, sans-serif;
@@ -47,30 +50,32 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #171C1B;
-    --surface: #1F2624;
-    --mint: #1D2B29;
-    --ink: #ECE9E2;
-    --ink-soft: #AEB5B0;
-    --line: #34403D;
-    --field-border: #7F8783;
+    --paper: #1A201F;
+    --surface: #232B29;
+    --mint: #22322F;
+    --cream: #2A2621;
+    --ink: #EDEAE3;
+    --ink-soft: #B0B7B2;
+    --line: #35413E;
+    --field-border: #7C8581;
 
-    --action: #8FC0C6;
-    --action-hover: #A9D1D6;
-    --on-action: #10201F;
-    --accent-text: #A9C09A;
+    --action: #93C4CA;
+    --action-hover: #AFD5DA;
+    --on-action: #11201F;
+    --accent-text: #AEC4A0;
 
-    --danger: #F0A396;
-    --danger-bg: #3A2421;
+    --danger: #F2A99C;
+    --danger-bg: #3B2523;
 
-    --band: #0F1312;
-    --band-ink: #ECE9E2;
-    --band-soft: #BFC7C2;
-    --band-line: #2C3533;
+    --band: #2A4F55;
+    --band-ink: #F2F8F7;
+    --band-soft: #D3E5E3;
+    --band-accent: #CFE6B8;
+    --band-line: #43696F;
 
-    --status-open: #A9C09A;
-    --status-appt: #8FC0C6;
-    --status-closed: #7F8783;
+    --status-open: #AEC4A0;
+    --status-appt: #93C4CA;
+    --status-closed: #7C8581;
   }
 }
 
@@ -249,15 +254,15 @@ code {
   color: var(--on-action);
 }
 
-/* Fixed colors: this button only sits on the dark band, in both themes. */
+/* Fixed colors: this button only sits on the teal band, in both themes. */
 .btn-light {
-  background: #D4EDE8;
-  color: #2B2B2B;
+  background: #E4F3EF;
+  color: #23474C;
 }
 
 .btn-light:hover {
   background: #FFFFFF;
-  color: #2B2B2B;
+  color: #23474C;
 }
 
 .btn-danger {
@@ -541,7 +546,7 @@ code {
   background: var(--surface);
   border-radius: var(--radius-l);
   padding: 28px;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.06), 0 18px 40px -20px rgb(43 43 43 / 0.28);
+  box-shadow: 0 1px 2px rgb(58 107 115 / 0.07), 0 18px 40px -22px rgb(58 107 115 / 0.22);
 }
 
 .today-title {
@@ -850,7 +855,7 @@ code {
   inset: 24px -24px -24px 24px;
   border-radius: var(--radius-l);
   background: var(--sage);
-  opacity: 0.45;
+  opacity: 0.35;
 }
 
 .photo-placeholder {
@@ -943,7 +948,13 @@ code {
 
 /* Fees */
 
+/* Warm cream here, mint on the request section: the page alternates between the
+   logo's two temperatures instead of one repeated tint. */
 .fees {
+  background: var(--cream);
+}
+
+.request {
   background: var(--mint);
 }
 
@@ -1017,7 +1028,7 @@ code {
 .request-intro .request-urgent {
   padding: 16px 18px;
   border-radius: var(--radius-m);
-  background: var(--mint);
+  background: var(--surface);
   color: var(--ink);
 }
 
